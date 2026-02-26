@@ -59,7 +59,7 @@ The system uses LangGraph to orchestrate multiple agents in a structur
 ---
 
 ## Project Structure
-'''
+ ```
 ai-tutor/
  │
  ├── app/
@@ -73,7 +73,7 @@ ai-tutor/
  ├── .env # Gemini API key
  ├── requirements.txt
  └── README.md
-'''
+ ```
 
 
 
