@@ -51,7 +51,7 @@ The system uses LangGraph to orchestrate multiple agents in a structur
 - Keeps explanations concise and interview-friendly  
 - Limits content length based on selected duration (~150 words per minute)  
 
-### Media Agent
+### Content Agent
 - Converts generated explanation into audio using text-to-speech  
 - Matches audio duration with the selected explanation time  
 - Prevents excessively long or broken outputs  
@@ -71,7 +71,7 @@ ai-tutor/
 ├── ui/
 │   └── streamlit_app.py     # Streamlit frontend interface
 │
-├── .env                     # Gemini API key (not committed)
+├── .env                     # Gemini API key 
 ├── requirements.txt
 └── README.md
 
