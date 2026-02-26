@@ -1,0 +1,10 @@
+langgraph
+langchain
+google-genai
+fastapi
+uvicorn
+python-dotenv
+streamlit
+requests
+uuid
+pyttsx3
