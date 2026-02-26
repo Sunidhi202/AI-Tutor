@@ -58,23 +58,22 @@ The system uses LangGraph to orchestrate multiple agents in a structur
 
 ---
 
-## Project Structure
- ```
+## Project Structure
+```
 ai-tutor/
- │
- ├── app/
- │ ├── main.py # FastAPI backend entry point
- │ ├── graph.py # LangGraph workflow and agent logic
- │ └── knowledge_base.py # Placement topics and reference content
- │
- ├── ui/
- │ └── streamlit_app.py # Streamlit frontend interface
- │
- ├── .env # Gemini API key
- ├── requirements.txt
- └── README.md
- ```
-
+│
+├── app/
+│   ├── main.py              # FastAPI backend entry point
+│   ├── graph.py             # LangGraph workflow and agent logic
+│   └── knowledge_base.py    # Placement topics and reference content
+│
+├── ui/
+│   └── streamlit_app.py     # Streamlit frontend interface
+│
+├── .env                     # Gemini API key
+├── requirements.txt
+└── README.me
+```
 
 
 ## How to Run the Project
