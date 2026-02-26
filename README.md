@@ -33,7 +33,7 @@ The architecture is modular and built using an agent-based workflow po
 
 ---
 
-## Architecture – Agent-Based Workflow
+## Architecture – Agent-Based Workflow
 
 The system uses LangGraph to orchestrate multiple agents in a structured flow.
 
