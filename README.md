@@ -2,9 +2,9 @@ AI Tutor is an AI-powered placement preparation assistant that explains
 
 The system uses an agent-based workflow to generate clear explanations with headings, short paragraphs, bullet points, and an optional audio walkthrough. The application is built using a FastAPI backend and a Streamlit frontend.
 
----
 
-## Overview
+
+## Overview
 
 This project helps students prepare for placements and technical interviews by:
 
@@ -16,9 +16,9 @@ This project helps students prepare for placements and technical interv
 
 The architecture is modular and built using an agent-based workflow powered by LangGraph.
 
----
 
-## Features
+
+## Features
 
 - Accepts placement-related questions from users  
 - Validates questions using guardrails  
@@ -37,12 +37,12 @@ The architecture is modular and built using an agent-based workflow po
 
 The system uses LangGraph to orchestrate multiple agents in a structured flow.
 
-### Guardrail Agent
+### Guardrail Agent
 - Validates whether the question is placement-related  
 - Rejects irrelevant or unsafe queries  
 - Prevents misuse of the system  
 
-### Teacher Agent
+### Teacher Agent
 - Uses Gemini (Free Tier) for content generation  
 - Produces:
   - Concept heading  
@@ -51,42 +51,42 @@ The system uses LangGraph to orchestrate multiple agents in a structur
 - Keeps explanations concise and interview-friendly  
 - Limits content length based on selected duration (~150 words per minute)  
 
-### Content Agent
+### Content Agent
 - Converts generated explanation into audio using text-to-speech  
 - Matches audio duration with the selected explanation time  
 - Prevents excessively long or broken outputs  
 
 ---
 
-## Project Structure
+## Project Structure
 
 
 ai-tutor/
-│
-├── app/
-│   ├── main.py              # FastAPI backend entry point
-│   ├── graph.py             # LangGraph workflow and agent logic
-│   └── knowledge_base.py    # Placement topics and reference content
-│
-├── ui/
-│   └── streamlit_app.py     # Streamlit frontend interface
-│
-├── .env                     # Gemini API key 
-├── requirements.txt
-└── README.md
+ │
+ ├── app/
+ │ ├── main.py # FastAPI backend entry point
+ │ ├── graph.py # LangGraph workflow and agent logic
+ │ └── knowledge_base.py # Placement topics and reference content
+ │
+ ├── ui/
+ │ └── streamlit_app.py # Streamlit frontend interface
+ │
+ ├── .env # Gemini API key
+ ├── requirements.txt
+ └── README.md
 
 
----
 
-## How to Run the Project
 
-### 1. Create a Virtual Environment
+## How to Run the Project
+
+### 1. Create a Virtual Environment
 
 bash
 python -m venv venv
 
 
-Activate it:
+### Activate it:
 
 *Windows*
 bash
@@ -100,7 +100,7 @@ source venv/bin/activate
 
 ---
 
-### 2. Install Dependencies
+### 2. Install Dependencies
 
 bash
 pip install -r requirements.txt
@@ -108,7 +108,7 @@ pip install -r requirements.txt
 
 ---
 
-### 3. Add Gemini API Key
+### 3. Add Gemini API Key
 
 Create a .env file in the root directory and add:
 
@@ -120,7 +120,7 @@ Make sure your backend loads environment variables correctly.
 
 ---
 
-### 4. Start the Backend (FastAPI)
+### 4. Start the Backend (FastAPI)
 
 bash
 uvicorn app.main:app --reload
@@ -133,7 +133,7 @@ http://127.0.0.1:8000
 
 ---
 
-### 5. Start the Frontend (Streamlit)
+### 5. Start the Frontend (Streamlit)
 
 In a new terminal:
 
@@ -143,9 +143,9 @@ streamlit run ui/streamlit_app.py
 
 The application will open automatically in your browser.
 
----
 
-## Tech Stack
+
+## Tech Stack
 
 - Python 3.14  
 - LangGraph – Agent orchestration  
@@ -154,9 +154,8 @@ The application will open automatically in your browser.
 - Streamlit – Frontend UI  
 - pyttsx3 – Text-to-speech audio generation  
 
----
 
-## Design Goals
+## Design Goals
 
 - Simple explanations for interview preparation  
 - Structured and readable output  
@@ -164,9 +163,8 @@ The application will open automatically in your browser.
 - Modular and scalable architecture  
 - Clean separation between backend, agents, and UI  
 
----
 
-## Future Improvements
+## Future Improvements
 
 - Add user authentication  
 - Add session history tracking  
